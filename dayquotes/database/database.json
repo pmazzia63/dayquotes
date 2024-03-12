@@ -1,0 +1,40 @@
+{
+    "quotes": [
+      {
+        "id": 1,
+        "text": "To be, or not to be, that is the question.",
+        "author": "William Shakespeare",
+        "show": "Hamlet",
+        "comment": "A famous line pondering the nature of existence."
+      },
+      {
+        "id": 2,
+        "text": "I think, therefore I am.",
+        "author": "René Descartes",
+        "show": "Meditations on First Philosophy",
+        "comment": "A fundamental element of Western philosophical thought."
+      },
+      {
+        "id": 3,
+        "text": "Cogito, ergo sum.",
+        "author": "René Descartes",
+        "show": "Principles of Philosophy",
+        "comment": "The original Latin version of 'I think, therefore I am.'"
+      },
+      {
+        "id": 4,
+        "text": "I am what I am.",
+        "author": "Popeye",
+        "show": "Popeye the Sailor",
+        "comment": "A simple declaration of self-acceptance."
+      },
+      {
+        "id": 5,
+        "text": "I yam what I yam.",
+        "author": "Popeye",
+        "show": "Popeye the Sailor",
+        "comment": "Popeye's humorous pronunciation of 'I am what I am.'"
+      }
+    ]
+  }
+  
