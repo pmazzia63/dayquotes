@@ -2,24 +2,17 @@
     "quotes": [
       {
         "id": 1,
-        "text": "To be, or not to be, that is the question.",
-        "author": "William Shakespeare",
-        "show": "Hamlet",
-        "comment": "A famous line pondering the nature of existence."
+        "text": "Be curious, not Judgmental.",
+        "author": "Ted Lasso",
+        "show": "Ted Lasso",
+        "comment": "Amazing advice for life."
       },
       {
         "id": 2,
-        "text": "I think, therefore I am.",
-        "author": "René Descartes",
-        "show": "Meditations on First Philosophy",
-        "comment": "A fundamental element of Western philosophical thought."
-      },
-      {
-        "id": 3,
-        "text": "Cogito, ergo sum.",
-        "author": "René Descartes",
-        "show": "Principles of Philosophy",
-        "comment": "The original Latin version of 'I think, therefore I am.'"
+        "text": "Just keep swimming, just keep swimming.",
+        "author": "Dori",
+        "show": "Nemo",
+        "comment": "A simple reminder to keep moving forward."
       },
       {
         "id": 4,
@@ -27,13 +20,6 @@
         "author": "Popeye",
         "show": "Popeye the Sailor",
         "comment": "A simple declaration of self-acceptance."
-      },
-      {
-        "id": 5,
-        "text": "I yam what I yam.",
-        "author": "Popeye",
-        "show": "Popeye the Sailor",
-        "comment": "Popeye's humorous pronunciation of 'I am what I am.'"
       }
     ]
   }
