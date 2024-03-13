@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Citation du Jour</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5dc; /* Couleur crème */
+            font-family: 'Times New Roman', serif; /* Police classique et esthétique */
+        }
+        #quoteContainer {
+            font-size: 24px; /* Taille de la police un peu plus grande */
+            color: #333; /* Couleur de la police, ici un gris foncé */
+            text-align: center;
+            padding: 20px;
+        }
+        .quoteText {
+            font-style: italic; /* Style de la citation */
+        }
+        .quoteAuthor {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="quoteContainer">Chargement de la citation du jour...</div>
+    <script>
+        fetch('http://127.0.0.1:8000/dayquote')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Réponse réseau non OK');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const quote = data.quote_content;
+                const quoteText = quote.text;
+                const author = quote.author;
+                const show = quote.show;
+                const comment = quote.comment;
+
+                document.getElementById('quoteContainer').innerHTML = 
+                    `<div class="quoteText">"${quoteText}"</div>
+                    <div class="quoteAuthor">- ${author}, <i>${show}</i></div>
+                    <div class="quoteComment">${comment}</div>`;
+            })
+            .catch(error => {
+                console.error('Erreur lors de l\'appel API:', error);
+                document.getElementById('quoteContainer').innerText = 'Erreur lors du chargement de la citation.';
+            });
+    </script>
+</body>
+</html>

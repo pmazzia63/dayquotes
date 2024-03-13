@@ -1,12 +1,23 @@
 import random
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from dayquotes.api.utils import get_daily_seed
 from dayquotes.database.read_database import load_quotes
 
 
 app = FastAPI()
+
+
+# Configurer le middleware CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permet à toutes les origines
+    allow_credentials=True,
+    allow_methods=["*"],  # Permet toutes les méthodes
+    allow_headers=["*"],  # Permet tous les headers
+)
 
 
 @app.get("/health/")
