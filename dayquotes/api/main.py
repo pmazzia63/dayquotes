@@ -1,11 +1,11 @@
 import random
 
+import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from dayquotes.api.utils import get_daily_seed
 from dayquotes.database.read_database import load_quotes
-
 
 app = FastAPI()
 
@@ -33,3 +33,8 @@ def read_day_quotes():
     quote = random.choice(quotes["quotes"])
 
     return {"quote_content": quote}
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", port=8000
+                )
